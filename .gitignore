@@ -1,0 +1,30 @@
+# Virtual Environment
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Models
+*.onnx
+*.pth
+*.pt
+
+# Database
+*.db
+
+# Temporary Files
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
