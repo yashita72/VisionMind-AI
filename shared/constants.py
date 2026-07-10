@@ -1,0 +1,3 @@
+WINDOW_NAME = "VisionMind AI"
+
+DEFAULT_CAMERA = 0
