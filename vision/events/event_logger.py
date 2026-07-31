@@ -23,6 +23,11 @@ class EventLogger:
             db_path: Path to the SQLite database.
             screenshot_dir: Directory where event screenshots are saved.
         """
+        if os.environ.get("VERCEL"):
+            db_path = "/tmp/events.db"
+            screenshot_dir = "/tmp/screenshots"
+            logger.info("Vercel environment detected. Overriding database and screenshots path to /tmp.")
+
         self.db_path = db_path
         self.screenshot_dir = screenshot_dir
 

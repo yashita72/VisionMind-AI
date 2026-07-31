@@ -21,6 +21,8 @@ class FaceSearcher:
             database_dir: Path to the registered faces database.
             recognizer: An instance of SFaceRecognizer. If None, instantiates one.
         """
+        if os.environ.get("VERCEL"):
+            database_dir = "/tmp/database"
         self.database_dir = database_dir
         self.recognizer = recognizer if recognizer is not None else SFaceRecognizer()
         self.database: Dict[str, np.ndarray] = {}

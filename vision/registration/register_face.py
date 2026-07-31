@@ -22,6 +22,8 @@ class FaceRegistrar:
         Args:
             database_dir: Directory where face records are stored.
         """
+        if os.environ.get("VERCEL"):
+            database_dir = "/tmp/database"
         self.database_dir = database_dir
         os.makedirs(self.database_dir, exist_ok=True)
         self.detector = YuNetDetector()
